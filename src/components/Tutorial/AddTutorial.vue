@@ -59,7 +59,7 @@ export default class AddTutorial extends Vue {
 
   private submitted: boolean = false;
 
-  saveTutorial() {
+  saveTutorial(): void {
     const data = {
       title: this.tutorial.title,
       description: this.tutorial.description,
@@ -78,7 +78,8 @@ export default class AddTutorial extends Vue {
       });
   }
 
-  newTutorial() {
+  newTutorial(): void {
+    console.log('newTutorial');
     this.submitted = false;
     this.tutorial = {};
   }

@@ -1,1 +1,1 @@
-export const CURRENT_SERVER = 'http://localhost:8080/api';
+export const CURRENT_SERVER = 'https://react-quiz-195ff-default-rtdb.firebaseio.com/';

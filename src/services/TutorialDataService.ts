@@ -6,49 +6,49 @@ class TutorialDataService {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
-    return instCred.get('/tutorials');
+    return instCred.get('/crud-ts-vue2-default-rtdb.json');
   }
 
   get(id: string) {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
-    return instCred.get(`/tutorials/${id}`);
+    return instCred.get(`/crud-ts-vue2-default-rtdb.json/${id}`);
   }
 
   create(data: any) {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
-    return instCred.post('/tutorials', data);
+    return instCred.post('/crud-ts-vue2-default-rtdb.json', data);
   }
 
   update(id: string, data: any) {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
-    return instCred.put(`/tutorials/${id}`, data);
+    return instCred.put(`/crud-ts-vue2-default-rtdb.json/${id}`, data);
   }
 
   delete(id: string) {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
-    return instCred.delete(`/tutorials/${id}`);
+    return instCred.delete(`/crud-ts-vue2-default-rtdb.json/${id}`);
   }
 
   deleteAll() {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
-    return instCred.delete('/tutorials');
+    return instCred.delete('/crud-ts-vue2-default-rtdb.json');
   }
 
   findByTitle(title: string) {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
-    return instCred.get(`/tutorials?title=${title}`);
+    return instCred.get(`/crud-ts-vue2-default-rtdb.json?title=${title}`);
   }
 }
 
