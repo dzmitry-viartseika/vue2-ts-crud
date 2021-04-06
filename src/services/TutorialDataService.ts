@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { CURRENT_SERVER } from '../constants/domain';
+import { newTitle } from '../types/newTitle';
+
 
 class TutorialDataService {
   getAll() {
@@ -16,14 +18,14 @@ class TutorialDataService {
     return instCred.get(`/crud-ts-vue2-default-rtdb.json/${id}`);
   }
 
-  create(data: any) {
+  create(data: newTitle) {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
     return instCred.post('/crud-ts-vue2-default-rtdb.json', data);
   }
 
-  update(id: string, data: any) {
+  update(id: string, data: newTitle) {
     const instCred = axios.create({
       baseURL: CURRENT_SERVER,
     });
